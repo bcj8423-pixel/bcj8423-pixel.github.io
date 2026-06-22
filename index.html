@@ -60,9 +60,9 @@
   .hero .role{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem;}
   html[lang="ko"] .hero .role{font-family:var(--sans);font-weight:500;letter-spacing:.04em;}
   h1.name{font-family:var(--serif);font-weight:500;font-size:clamp(2.9rem,8vw,5.4rem);line-height:1.02;letter-spacing:-.015em;margin:0;color:var(--ink);}
-  .name-sub{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(1.05rem,3vw,1.45rem);color:var(--ink-soft);margin:.5rem 0 0;}
-  html[lang="ko"] .name-sub{font-style:normal;font-weight:400;}
-  .hero-lede{font-size:clamp(1.04rem,2vw,1.18rem);color:var(--ink-soft);max-width:62ch;margin:1.7rem 0 0;}
+  .name-sub{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.3rem,3.4vw,1.85rem);color:var(--ink);margin:.55rem 0 0;}
+  html[lang="ko"] .name-sub{font-style:normal;}
+  .hero-lede{font-size:clamp(1.04rem,2vw,1.18rem);color:var(--ink-soft);max-width:62ch;margin:1.7rem 0 0;text-align:justify;word-break:keep-all;hyphens:auto;}
   .hero-lede strong{color:var(--ink);font-weight:600;}
   .hero-meta{display:flex;flex-wrap:wrap;gap:.55rem .8rem;margin:2rem 0 0;}
   .chip{font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .85rem;}
@@ -77,14 +77,14 @@
   section:last-of-type{border-bottom:none;}
   h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.12;letter-spacing:-.01em;margin:0 0 1.6rem;color:var(--ink);}
   p{margin:0 0 1.1rem;}
-  .lede{font-size:1.1rem;color:var(--ink-soft);max-width:70ch;}
+  .lede{font-size:1.1rem;color:var(--ink-soft);max-width:70ch;text-align:justify;word-break:keep-all;hyphens:auto;}
 
   /* research themes */
   .themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-top:2px solid var(--accent);margin-top:.4rem;}
   .theme{background:var(--paper);padding:1.6rem 1.5rem;}
   .theme .tnum{font-family:var(--mono);font-size:.74rem;color:var(--accent);letter-spacing:.08em;}
   .theme h3{font-family:var(--serif);font-weight:500;font-size:1.26rem;margin:.7rem 0 .55rem;color:var(--ink);line-height:1.18;}
-  .theme p{font-size:.95rem;color:var(--ink-soft);margin:0;}
+  .theme p{font-size:.95rem;color:var(--ink-soft);margin:0;text-align:justify;word-break:keep-all;hyphens:auto;}
   @media (max-width:760px){.themes{grid-template-columns:1fr;}}
 
   /* entry lists */
@@ -94,9 +94,9 @@
   .entry .when{font-family:var(--mono);font-size:.82rem;color:var(--accent);padding-top:.15rem;letter-spacing:.02em;}
   .entry .what p{margin:0;}
   .entry .what .title{font-weight:600;color:var(--ink);}
-  .entry .what .meta{color:var(--ink-soft);font-size:.95rem;margin-top:.2rem;}
+  .entry .what .meta{color:var(--ink-soft);font-size:.95rem;margin-top:.2rem;text-align:justify;word-break:keep-all;hyphens:auto;}
   .entry .what .meta i,.entry .what .ref i{font-style:italic;}
-  .entry .what .ref{color:var(--ink-soft);font-size:.95rem;margin-top:.25rem;}
+  .entry .what .ref{color:var(--ink-soft);font-size:.95rem;margin-top:.25rem;text-align:justify;word-break:keep-all;hyphens:auto;}
   .entry .what .ref strong{color:var(--ink);font-weight:600;}
   .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-wash);border-radius:4px;padding:.15rem .45rem;margin-left:.4rem;vertical-align:middle;}
   @media (max-width:600px){.entry{grid-template-columns:1fr;gap:.35rem;}.entry .when{padding-top:0;}}
@@ -110,7 +110,7 @@
   .rep{display:grid;grid-template-columns:62px 1fr;gap:1rem;padding:.6rem 0;border-top:1px solid var(--line);font-size:.92rem;}
   .rep:first-child{border-top:none;}
   .rep .ry{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-top:.1rem;}
-  .rep .rt{color:var(--ink);}
+  .rep .rt{color:var(--ink);text-align:justify;word-break:keep-all;hyphens:auto;}
   .rep .rt .org{color:var(--ink-soft);}
   @media (max-width:600px){.rep{grid-template-columns:1fr;gap:.15rem;}}
 
