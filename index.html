@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Byeongcheol Cho — Psychology Researcher</title>
+<meta name="description" content="Byeongcheol Cho, Ph.D. — postdoctoral researcher on identity and the correction and rehabilitation of juveniles and adults: desistance, the Good Lives Model, and identity-based intervention. Dongguk University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F6F4; --paper-2:#EFF1ED;
+    --ink:#191D1A; --ink-soft:#545A54;
+    --line:#D6D9D1; --accent:#155E63; --accent-wash:#E2ECEA;
+    --maxw:940px;
+    --serif:"Newsreader",serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",monospace;
+  }
+  /* Korean font stacks swap in when <html lang="ko"> */
+  html[lang="ko"]{ --serif:"Noto Serif KR",serif; --sans:"Noto Sans KR",system-ui,sans-serif; }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  html[lang="ko"] body{line-height:1.75;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;text-underline-offset:3px;}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  /* eyebrow + ruler motif */
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.7em;margin:0 0 1.4rem;}
+  .eyebrow::before{content:"";width:28px;height:1px;flex:none;background:var(--accent);}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 28px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+  .brand{font-family:var(--serif);font-weight:500;font-size:1.12rem;color:var(--ink);white-space:nowrap;}
+  .brand:hover{text-decoration:none;}
+  .nav-right{display:flex;align-items:center;gap:1.6rem;}
+  .nav-links{display:flex;gap:1.5rem;}
+  .nav-links a{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);white-space:nowrap;}
+  html[lang="ko"] .nav-links a{font-family:var(--sans);font-weight:500;}
+  .nav-links a:hover{color:var(--accent);text-decoration:none;}
+  @media (max-width:760px){.nav-links{display:none;}}
+  /* language toggle */
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper-2);}
+  .lang button{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;border:0;background:transparent;color:var(--ink-soft);padding:.34rem .7rem;cursor:pointer;}
+  .lang button.active{background:var(--accent);color:#fff;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(78% 70% at 86% 0%,var(--accent-wash),transparent 68%);opacity:.55;pointer-events:none;}
+  .hero-strata{position:absolute;inset:0;width:100%;height:100%;color:#A9BAB2;opacity:.7;pointer-events:none;z-index:0;
+    -webkit-mask-image:radial-gradient(125% 120% at 80% -8%,#000 30%,transparent 80%);mask-image:radial-gradient(125% 120% at 80% -8%,#000 30%,transparent 80%);}
+  .hero-inner{position:relative;padding:clamp(3.2rem,8vw,6rem) 28px clamp(2.8rem,6vw,4.6rem);max-width:var(--maxw);margin:0 auto;}
+  .hero .role{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem;}
+  html[lang="ko"] .hero .role{font-family:var(--sans);font-weight:500;letter-spacing:.04em;}
+  h1.name{font-family:var(--serif);font-weight:500;font-size:clamp(2.9rem,8vw,5.4rem);line-height:1.02;letter-spacing:-.015em;margin:0;color:var(--ink);}
+  .name-sub{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(1.05rem,3vw,1.45rem);color:var(--ink-soft);margin:.5rem 0 0;}
+  html[lang="ko"] .name-sub{font-style:normal;font-weight:400;}
+  .hero-lede{font-size:clamp(1.04rem,2vw,1.18rem);color:var(--ink-soft);max-width:62ch;margin:1.7rem 0 0;}
+  .hero-lede strong{color:var(--ink);font-weight:600;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:.55rem .8rem;margin:2rem 0 0;}
+  .chip{font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .85rem;}
+  html[lang="ko"] .chip{font-family:var(--sans);}
+  .hero-links{display:flex;flex-wrap:wrap;gap:1.4rem;margin:2.1rem 0 0;}
+  .hero-links a{font-family:var(--mono);font-size:.82rem;letter-spacing:.03em;display:inline-flex;align-items:center;gap:.45em;}
+  html[lang="ko"] .hero-links a{font-family:var(--sans);font-weight:500;}
+  .hero-links a .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+
+  /* sections */
+  section{padding:clamp(3.2rem,6vw,5.2rem) 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.12;letter-spacing:-.01em;margin:0 0 1.6rem;color:var(--ink);}
+  p{margin:0 0 1.1rem;}
+  .lede{font-size:1.1rem;color:var(--ink-soft);max-width:70ch;}
+
+  /* research themes */
+  .themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-top:2px solid var(--accent);margin-top:.4rem;}
+  .theme{background:var(--paper);padding:1.6rem 1.5rem;}
+  .theme .tnum{font-family:var(--mono);font-size:.74rem;color:var(--accent);letter-spacing:.08em;}
+  .theme h3{font-family:var(--serif);font-weight:500;font-size:1.26rem;margin:.7rem 0 .55rem;color:var(--ink);line-height:1.18;}
+  .theme p{font-size:.95rem;color:var(--ink-soft);margin:0;}
+  @media (max-width:760px){.themes{grid-template-columns:1fr;}}
+
+  /* entry lists */
+  .entries{margin-top:.2rem;}
+  .entry{display:grid;grid-template-columns:118px 1fr;gap:1.4rem;padding:1.25rem 0;border-top:1px solid var(--line);}
+  .entry:first-child{border-top:none;}
+  .entry .when{font-family:var(--mono);font-size:.82rem;color:var(--accent);padding-top:.15rem;letter-spacing:.02em;}
+  .entry .what p{margin:0;}
+  .entry .what .title{font-weight:600;color:var(--ink);}
+  .entry .what .meta{color:var(--ink-soft);font-size:.95rem;margin-top:.2rem;}
+  .entry .what .meta i,.entry .what .ref i{font-style:italic;}
+  .entry .what .ref{color:var(--ink-soft);font-size:.95rem;margin-top:.25rem;}
+  .entry .what .ref strong{color:var(--ink);font-weight:600;}
+  .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-wash);border-radius:4px;padding:.15rem .45rem;margin-left:.4rem;vertical-align:middle;}
+  @media (max-width:600px){.entry{grid-template-columns:1fr;gap:.35rem;}.entry .when{padding-top:0;}}
+
+  .sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:2.4rem 0 .3rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);}
+  html[lang="ko"] .sub{font-family:var(--sans);font-weight:600;letter-spacing:.02em;}
+  .sub:first-of-type{margin-top:.2rem;}
+
+  /* compact reports */
+  .reps{margin-top:.2rem;}
+  .rep{display:grid;grid-template-columns:62px 1fr;gap:1rem;padding:.6rem 0;border-top:1px solid var(--line);font-size:.92rem;}
+  .rep:first-child{border-top:none;}
+  .rep .ry{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-top:.1rem;}
+  .rep .rt{color:var(--ink);}
+  .rep .rt .org{color:var(--ink-soft);}
+  @media (max-width:600px){.rep{grid-template-columns:1fr;gap:.15rem;}}
+
+  .note{font-size:.92rem;color:var(--ink-soft);margin-top:1.1rem;}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:.4rem;}
+  .contact-grid .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.4rem;}
+  html[lang="ko"] .contact-grid .label{font-family:var(--sans);font-weight:600;letter-spacing:.02em;}
+  .contact-grid a,.contact-grid p{font-size:1.02rem;margin:0 0 .3rem;}
+  @media (max-width:600px){.contact-grid{grid-template-columns:1fr;}}
+
+  footer{padding:2.4rem 0 3.2rem;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+  footer p{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);margin:0;letter-spacing:.03em;}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" data-k="brand">Byeongcheol Cho</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#about" data-k="nav_about">About</a>
+        <a href="#research" data-k="nav_research">Research</a>
+        <a href="#publications" data-k="nav_pubs">Publications</a>
+        <a href="#teaching" data-k="nav_teaching">Teaching</a>
+        <a href="#contact" data-k="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+        <button id="btn-ko" onclick="setLang('ko')">국문</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <svg class="hero-strata" viewBox="0 0 1440 540" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"><polyline points="0,58.0 20,60.3 40,62.5 60,64.5 80,66.1 100,67.4 120,68.2 140,68.6 160,68.5 180,68.0 200,67.2 220,66.2 240,65.1 260,63.9 280,62.7 300,61.6 320,60.6 340,59.8 360,59.2 380,58.7 400,58.2 420,57.8 440,57.3 460,56.8 480,56.2 500,55.4 520,54.4 540,53.3 560,52.1 580,50.9 600,49.8 620,48.8 640,48.0 660,47.5 680,47.4 700,47.8 720,48.6 740,49.9 760,51.5 780,53.5 800,55.7 820,58.0 840,60.3 860,62.5 880,64.5 900,66.1 920,67.4 940,68.2 960,68.6 980,68.5 1000,68.0 1020,67.2 1040,66.2 1060,65.1 1080,63.9 1100,62.7 1120,61.6 1140,60.6 1160,59.8 1180,59.2 1200,58.7 1220,58.2 1240,57.8 1260,57.3 1280,56.8 1300,56.2 1320,55.4 1340,54.4 1360,53.3 1380,52.1 1400,50.9 1420,49.8 1440,48.8"/><polyline points="0,110.0 20,111.4 40,112.3 60,112.6 80,112.3 100,111.5 120,110.2 140,108.6 160,106.7 180,104.7 200,102.6 220,100.6 240,98.7 260,97.1 280,95.7 300,94.5 320,93.6 340,92.9 360,92.3 380,91.8 400,91.3 420,90.8 440,90.2 460,89.5 480,88.6 500,87.6 520,86.5 540,85.3 560,84.1 580,83.1 600,82.2 620,81.6 640,81.4 660,81.6 680,82.3 700,83.5 720,85.2 740,87.4 760,90.0 780,92.9 800,95.9 820,99.0 840,102.1 860,105.0 880,107.5 900,109.6 920,111.1 940,112.1 960,112.6 980,112.4 1000,111.7 1020,110.5 1040,109.0 1060,107.1 1080,105.1 1100,103.1 1120,101.1 1140,99.2 1160,97.5 1180,96.0 1200,94.8 1220,93.8 1240,93.0 1260,92.4 1280,91.9 1300,91.4 1320,90.9 1340,90.4 1360,89.7 1380,88.8 1400,87.8 1420,86.7 1440,85.6"/><polyline points="0,149.1 20,147.8 40,146.1 60,144.2 80,142.1 100,139.9 120,137.7 140,135.5 160,133.6 180,131.8 200,130.3 220,129.1 240,128.2 260,127.5 280,127.0 300,126.6 320,126.4 340,126.2 360,126.0 380,125.7 400,125.4 420,125.0 440,124.4 460,123.9 480,123.2 500,122.6 520,122.0 540,121.6 560,121.4 580,121.4 600,121.7 620,122.5 640,123.6 660,125.1 680,126.9 700,129.1 720,131.5 740,134.2 760,136.9 780,139.6 800,142.2 820,144.6 840,146.7 860,148.3 880,149.5 900,150.2 920,150.3 940,149.9 960,149.1 980,147.8 1000,146.1 1020,144.2 1040,142.1 1060,139.8 1080,137.6 1100,135.5 1120,133.6 1140,131.8 1160,130.3 1180,129.1 1200,128.2 1220,127.5 1240,126.9 1260,126.6 1280,126.4 1300,126.2 1320,126.0 1340,125.7 1360,125.4 1380,125.0 1400,124.4 1420,123.8 1440,123.2"/><polyline points="0,173.9 20,172.3 40,170.8 60,169.5 80,168.2 100,167.2 120,166.3 140,165.7 160,165.2 180,165.0 200,164.8 220,164.8 240,164.9 260,165.0 280,165.1 300,165.1 320,165.2 340,165.1 360,165.1 380,165.0 400,164.8 420,164.7 440,164.6 460,164.6 480,164.7 500,165.0 520,165.4 540,166.1 560,166.9 580,168.0 600,169.2 620,170.6 640,172.1 660,173.7 680,175.3 700,176.8 720,178.2 740,179.4 760,180.4 780,181.1 800,181.5 820,181.6 840,181.3 860,180.7 880,179.8 900,178.7 920,177.4 940,175.9 960,174.4 980,172.8 1000,171.3 1020,169.9 1040,168.6 1060,167.5 1080,166.6 1100,165.9 1120,165.4 1140,165.0 1160,164.9 1180,164.8 1200,164.8 1220,164.9 1240,165.0 1260,165.1 1280,165.2 1300,165.2 1320,165.1 1340,165.0 1360,164.9 1380,164.7 1400,164.6 1420,164.6 1440,164.6"/><polyline points="0,205.4 20,205.0 40,204.6 60,204.4 80,204.3 100,204.3 120,204.4 140,204.6 160,204.8 180,205.0 200,205.1 220,205.3 240,205.4 260,205.5 280,205.6 300,205.7 320,205.7 340,205.8 360,205.9 380,206.0 400,206.3 420,206.6 440,207.1 460,207.6 480,208.2 500,208.9 520,209.6 540,210.4 560,211.2 580,211.9 600,212.5 620,213.0 640,213.4 660,213.6 680,213.6 700,213.5 720,213.1 740,212.6 760,212.0 780,211.2 800,210.3 820,209.4 840,208.5 860,207.6 880,206.8 900,206.1 920,205.5 940,205.0 960,204.6 980,204.4 1000,204.3 1020,204.3 1040,204.4 1060,204.6 1080,204.8 1100,205.0 1120,205.1 1140,205.3 1160,205.4 1180,205.5 1200,205.6 1220,205.7 1240,205.7 1260,205.8 1280,205.9 1300,206.0 1320,206.3 1340,206.6 1360,207.0 1380,207.5 1400,208.2 1420,208.8 1440,209.6"/><polyline points="0,240.0 20,240.2 40,240.6 60,241.1 80,241.5 100,242.0 120,242.4 140,242.8 160,243.1 180,243.4 200,243.6 220,243.8 240,244.0 260,244.2 280,244.6 300,245.0 320,245.6 340,246.2 360,247.0 380,247.9 400,248.8 420,249.7 440,250.6 460,251.4 480,252.0 500,252.4 520,252.5 540,252.4 560,252.0 580,251.3 600,250.4 620,249.2 640,248.0 660,246.6 680,245.3 700,244.0 720,242.8 740,241.8 760,241.0 780,240.4 800,240.0 820,239.9 840,240.0 860,240.2 880,240.6 900,241.0 920,241.5 940,242.0 960,242.4 980,242.8 1000,243.1 1020,243.4 1040,243.6 1060,243.8 1080,244.0 1100,244.2 1120,244.6 1140,245.0 1160,245.5 1180,246.2 1200,247.0 1220,247.8 1240,248.8 1260,249.7 1280,250.6 1300,251.3 1320,252.0 1340,252.4 1360,252.5 1380,252.4 1400,252.0 1420,251.3 1440,250.4"/><polyline points="0,276.0 20,277.5 40,278.8 60,279.9 80,280.8 100,281.5 120,282.1 140,282.6 160,283.2 180,283.9 200,284.7 220,285.8 240,287.0 260,288.5 280,290.1 300,291.7 320,293.2 340,294.4 360,295.3 380,295.6 400,295.3 420,294.4 440,292.9 460,290.9 480,288.3 500,285.5 520,282.5 540,279.6 560,276.9 580,274.5 600,272.7 620,271.5 640,270.9 660,270.9 680,271.4 700,272.3 720,273.6 740,275.0 760,276.5 780,277.9 800,279.1 820,280.2 840,281.0 860,281.7 880,282.3 900,282.8 920,283.4 940,284.1 960,285.0 980,286.2 1000,287.5 1020,289.0 1040,290.6 1060,292.2 1080,293.6 1100,294.7 1120,295.4 1140,295.6 1160,295.1 1180,294.0 1200,292.3 1220,290.1 1240,287.4 1260,284.5 1280,281.6 1300,278.7 1320,276.1 1340,273.9 1360,272.3 1380,271.2 1400,270.8 1420,271.0 1440,271.6"/><polyline points="0,320.3 20,321.7 40,322.7 60,323.5 80,324.1 100,324.9 120,325.8 140,326.9 160,328.4 180,330.0 200,331.7 220,333.3 240,334.6 260,335.3 280,335.3 300,334.5 320,332.8 340,330.1 360,326.7 380,322.8 400,318.5 420,314.3 440,310.4 460,307.2 480,304.8 500,303.4 520,303.0 540,303.6 560,305.1 580,307.2 600,309.8 620,312.5 640,315.1 660,317.5 680,319.5 700,321.1 720,322.2 740,323.1 760,323.8 780,324.5 800,325.3 820,326.4 840,327.7 860,329.2 880,330.9 900,332.6 920,334.0 940,335.0 960,335.4 980,335.0 1000,333.7 1020,331.4 1040,328.4 1060,324.7 1080,320.5 1100,316.3 1120,312.2 1140,308.6 1160,305.8 1180,303.9 1200,303.0 1220,303.2 1240,304.3 1260,306.2 1280,308.6 1300,311.2 1320,313.9 1340,316.4 1360,318.6 1380,320.4 1400,321.7 1420,322.7 1440,323.5"/><polyline points="0,363.5 20,363.8 40,364.2 60,364.6 80,365.2 100,366.0 120,366.9 140,367.8 160,368.6 180,369.0 200,368.8 220,368.0 240,366.5 260,364.3 280,361.4 300,358.0 320,354.4 340,350.9 360,347.7 380,345.0 400,343.2 420,342.3 440,342.4 460,343.4 480,345.2 500,347.6 520,350.4 540,353.2 560,355.9 580,358.3 600,360.2 620,361.7 640,362.6 660,363.3 680,363.7 700,364.0 720,364.3 740,364.9 760,365.6 780,366.4 800,367.3 820,368.2 840,368.8 860,369.0 880,368.5 900,367.4 920,365.6 940,363.0 960,359.9 980,356.4 1000,352.7 1020,349.3 1040,346.3 1060,344.1 1080,342.7 1100,342.3 1120,342.8 1140,344.2 1160,346.3 1180,348.9 1200,351.7 1220,354.5 1240,357.1 1260,359.3 1280,361.0 1300,362.2 1320,363.0 1340,363.5 1360,363.8 1380,364.1 1400,364.6 1420,365.2 1440,365.9"/><polyline points="0,399.8 20,399.9 40,400.0 60,400.2 80,400.4 100,400.5 120,400.5 140,400.3 160,399.8 180,398.9 200,397.8 220,396.3 240,394.6 260,392.8 280,391.1 300,389.4 320,388.0 340,387.0 360,386.5 380,386.5 400,387.0 420,387.9 440,389.2 460,390.8 480,392.5 500,394.2 520,395.8 540,397.2 560,398.3 580,399.1 600,399.6 620,399.9 640,400.0 660,399.9 680,399.9 700,399.8 720,399.9 740,400.0 760,400.1 780,400.3 800,400.5 820,400.5 840,400.3 860,399.9 880,399.1 900,398.0 920,396.6 940,395.0 960,393.2 980,391.4 1000,389.7 1020,388.3 1040,387.2 1060,386.6 1080,386.5 1100,386.8 1120,387.7 1140,388.9 1160,390.5 1180,392.2 1200,393.9 1220,395.5 1240,396.9 1260,398.1 1280,399.0 1300,399.5 1320,399.8 1340,400.0 1360,399.9 1380,399.9 1400,399.8 1420,399.8 1440,399.9"/><polyline points="0,435.3 20,435.3 40,435.2 60,435.1 80,434.9 100,434.6 120,434.2 140,433.6 160,432.9 180,432.1 200,431.2 220,430.3 240,429.5 260,428.8 280,428.2 300,427.8 320,427.6 340,427.7 360,428.1 380,428.6 400,429.4 420,430.3 440,431.3 460,432.3 480,433.3 500,434.1 520,434.9 540,435.5 560,436.0 580,436.2 600,436.4 620,436.3 640,436.2 660,436.1 680,435.9 700,435.7 720,435.5 740,435.4 760,435.4 780,435.3 800,435.3 820,435.2 840,435.1 860,434.9 880,434.6 900,434.1 920,433.5 940,432.8 960,432.0 980,431.1 1000,430.3 1020,429.4 1040,428.7 1060,428.1 1080,427.8 1100,427.6 1120,427.8 1140,428.1 1160,428.7 1180,429.5 1200,430.4 1220,431.4 1240,432.4 1260,433.3 1280,434.2 1300,435.0 1320,435.6 1340,436.0 1360,436.3 1380,436.4 1400,436.3 1420,436.2 1440,436.0"/><polyline points="0,472.2 20,471.7 40,471.2 60,470.4 80,469.6 100,468.6 120,467.5 140,466.4 160,465.2 180,464.2 200,463.2 220,462.5 240,462.0 260,461.8 280,461.9 300,462.3 320,463.1 340,464.1 360,465.4 380,466.9 400,468.5 420,470.1 440,471.7 460,473.2 480,474.5 500,475.5 520,476.4 540,476.9 560,477.2 580,477.3 600,477.1 620,476.8 640,476.3 660,475.8 680,475.3 700,474.7 720,474.3 740,473.9 760,473.5 780,473.3 800,473.1 820,472.9 840,472.6 860,472.3 880,471.9 900,471.4 920,470.7 940,469.9 960,468.9 980,467.9 1000,466.7 1020,465.6 1040,464.5 1060,463.5 1080,462.7 1100,462.1 1120,461.8 1140,461.8 1160,462.2 1180,462.8 1200,463.8 1220,465.0 1240,466.4 1260,468.0 1280,469.6 1300,471.2 1320,472.7 1340,474.0 1360,475.2 1380,476.1 1400,476.8 1420,477.1 1440,477.3"/><polyline points="0,503.8 20,502.4 40,500.9 60,499.4 80,497.9 100,496.5 120,495.3 140,494.4 160,493.8 180,493.5 200,493.8 220,494.5 240,495.7 260,497.3 280,499.3 300,501.6 320,504.1 340,506.8 360,509.5 380,512.2 400,514.6 420,516.8 440,518.6 460,520.0 480,521.0 500,521.5 520,521.6 540,521.3 560,520.6 580,519.7 600,518.6 620,517.4 640,516.1 660,514.8 680,513.7 700,512.6 720,511.7 740,510.9 760,510.3 780,509.7 800,509.2 820,508.8 840,508.2 860,507.6 880,506.9 900,506.0 920,504.9 940,503.7 960,502.3 980,500.9 1000,499.3 1020,497.8 1040,496.4 1060,495.2 1080,494.3 1100,493.7 1120,493.5 1140,493.8 1160,494.5 1180,495.7 1200,497.4 1220,499.4 1240,501.7 1260,504.3 1280,507.0 1300,509.7 1320,512.3 1340,514.7 1360,516.9 1380,518.7 1400,520.1 1420,521.0 1440,521.5"/></g></svg>
+  <div class="hero-inner">
+    <p class="role" data-k="role">Postdoctoral Researcher · Identity &amp; Correctional Rehabilitation</p>
+    <h1 class="name" data-k="name">Byeongcheol Cho</h1>
+    <p class="name-sub" data-k="name_sub">조병철 · Ph.D.</p>
+    <p class="hero-lede" data-kh="lede"></p>
+    <div class="hero-meta">
+      <span class="chip" data-k="chip1">Law &amp; Psychology Institute, Dongguk University</span>
+      <span class="chip" data-k="chip2">SSK Research Group · Generative-AI User Vulnerability</span>
+    </div>
+    <div class="hero-links">
+      <a href="mailto:bcj8423@gmail.com"><span class="dot"></span>bcj8423@gmail.com</a>
+      <a href="https://scholar.google.co.kr/citations?hl=ko&user=ZKfxHZIAAAAJ" target="_blank" rel="noopener"><span class="dot"></span>Google Scholar</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="about" class="reveal">
+    <p class="eyebrow" data-k="eb_about">About</p>
+    <h2 data-k="h_about"></h2>
+    <p class="lede" data-k="about1"></p>
+    <p class="lede" data-k="about2"></p>
+    <p class="lede" data-k="about3"></p>
+    <p class="lede" data-k="about4"></p>
+  </section>
+
+  <section id="research" class="reveal">
+    <p class="eyebrow" data-k="eb_research">Research</p>
+    <h2 data-k="h_research"></h2>
+    <div class="themes">
+      <div class="theme"><span class="tnum">i.</span><h3 data-k="t1_t"></h3><p data-k="t1_p"></p></div>
+      <div class="theme"><span class="tnum">ii.</span><h3 data-k="t2_t"></h3><p data-k="t2_p"></p></div>
+      <div class="theme"><span class="tnum">iii.</span><h3 data-k="t3_t"></h3><p data-k="t3_p"></p></div>
+    </div>
+  </section>
+
+  <section id="publications" class="reveal">
+    <p class="eyebrow" data-k="eb_pubs">Publications</p>
+    <h2 data-k="h_pubs"></h2>
+    <p class="sub" data-k="sub_articles">Peer-reviewed articles</p>
+    <div class="entries" id="articles"></div>
+    <p class="sub" data-k="sub_conf">Conference presentations</p>
+    <div class="entries" id="conferences"></div>
+    <p class="sub" data-k="sub_wip">Work in progress</p>
+    <div class="entries" id="wip"></div>
+    <p class="sub" data-k="sub_reports">Research &amp; policy reports</p>
+    <div class="reps" id="reports"></div>
+  </section>
+
+  <section id="grants" class="reveal">
+    <p class="eyebrow" data-k="eb_grants">Grants</p>
+    <h2 data-k="h_grants"></h2>
+    <div class="entries" id="grants-list"></div>
+  </section>
+
+  <section id="teaching" class="reveal">
+    <p class="eyebrow" data-k="eb_teaching">Teaching</p>
+    <h2 data-k="h_teaching"></h2>
+    <div class="entries" id="teaching-list"></div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <p class="eyebrow" data-k="eb_exp">Experience</p>
+    <h2 data-k="h_exp"></h2>
+    <div class="entries" id="experience-list"></div>
+  </section>
+
+  <section id="education" class="reveal">
+    <p class="eyebrow" data-k="eb_edu">Education</p>
+    <h2 data-k="h_edu"></h2>
+    <div class="entries" id="education-list"></div>
+  </section>
+
+  <section id="certs" class="reveal">
+    <p class="eyebrow" data-k="eb_cert">Certifications</p>
+    <h2 data-k="h_cert"></h2>
+    <div class="entries" id="certs-list"></div>
+    <p class="note" data-k="cert_note"></p>
+  </section>
+
+  <section id="contact" class="reveal">
+    <p class="eyebrow" data-k="eb_contact">Contact</p>
+    <h2 data-k="h_contact"></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="label" data-k="c_email">Email</p>
+        <a href="mailto:bcj8423@gmail.com">bcj8423@gmail.com</a>
+        <p class="label" style="margin-top:1.5rem;" data-k="c_aff">Affiliation</p>
+        <p data-kh="c_aff_v"></p>
+      </div>
+      <div>
+        <p class="label" data-k="c_else">Elsewhere</p>
+        <a href="https://scholar.google.co.kr/citations?hl=ko&user=ZKfxHZIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr"></span> Byeongcheol Cho · 조병철</p>
+    <p data-k="foot_loc">Seoul, Republic of Korea</p>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en:{
+    brand:"Byeongcheol Cho",
+    nav_about:"About", nav_research:"Research", nav_pubs:"Publications", nav_teaching:"Teaching", nav_contact:"Contact",
+    role:"Postdoctoral Researcher · Identity & Correctional Rehabilitation",
+    name:"Byeongcheol Cho", name_sub:"조병철 · Ph.D.",
+    lede:"Punishment alone doesn't break the cycle of reoffending — people return to the very circumstances that broke them. Rehabilitation is about helping them rebuild themselves there, and I believe the key to that change is <strong>identity</strong>. Helping young people who keep offending, and adults who have committed crimes, remake who they are — that is my work.",
+    chip1:"Law & Psychology Institute, Dongguk University",
+    chip2:"SSK Research Group · Generative-AI User Vulnerability",
+    eb_about:"About",
+    h_about:"People can change. I study how.",
+    about1:"A man serving time once told me, “Once I'm out, I'll never get another chance.” Wrongdoing has to carry consequences. But punishment alone does not stop reoffending. People who finish their sentences return to the same circumstances that broke them, and when they break again, the cost is borne by another victim. Reducing reoffending is not leniency; it is how we protect everyone. So I ask what makes a person able to stand again. Even when nothing around them has changed, some people leave crime behind, and what they share is a change in how they see themselves. I locate the conditions of that change in identity, and I test them scientifically.",
+    about2:"This question runs through my whole research path. I studied the structures around people in sociology, how we judge those who do wrong in social psychology, and made identity my subject in personality psychology. My six years at the Korean Institute of Criminology and Justice were spent testing it against both data and the field: analyzing judgments, investigation records, and correctional data, and meeting incarcerated people, victims, delinquent youth, and many practitioners. The patterns in the numbers and the context in the interviews pointed the same way. Rebuilding a person begins with identity.",
+    about3:"That is why my doctoral dissertation analyzed the identities of people who had offended. I took the starting point of any intervention to be understanding how a person defines who they are. What I found was that negative identity is not simply an unstable state; even within a life of crime, there were stably organized identities. That raised the next question: can an identity that has already hardened be rebuilt in another direction? This is where the weight of my work shifted from describing identity to changing it, from “stop offending” to “who do you want to become?” I am now working to extend this question into juvenile reformatories. It is an early stage, still a matter of securing institutional cooperation, with a long way to go; my aim is to understand a young person not as a list of risk factors but as the self they want to become.",
+    about4:"In my postdoctoral work I also pursue a different line of research, unrelated to crime: people and AI. I am defining dependence on AI as a psychological construct and developing a way to measure it. But what I ultimately ask lies beyond that: how dependence on AI changes what makes us human. The subjects differ, but the question converges on one thing. How do people understand themselves, and how do they change? Where I want my research to arrive is clear: to show, with evidence, that a person can rewrite their understanding of themselves and change for the better. People can change. I study that change.",
+    eb_research:"Research",
+    h_research:"Three threads, one question.",
+    t1_t:"Identity, Desistance & Rehabilitation",
+    t1_p:"The heart of my work. I look at why some people leave crime behind while others go back, and at the part identity plays at that fork. Identity takes several forms; I focus on negative identity and on identity as a life story, and I build strength-based programs — in the spirit of the Good Lives Model — that help juveniles and adults rebuild who they are. My NRF-funded reformatory study belongs here.",
+    t2_t:"The Psychology of Reoffending",
+    t2_p:"To understand who returns to crime and who doesn't, I look at the changeable factors behind reoffending — criminogenic cognition, self-control, psychopathy, aggression, and self-efficacy for criminal versus law-abiding behavior. These are not ends in themselves, but clues for aiming identity-based change more precisely.",
+    t3_t:"Morality, Punishment & the Social View of Offenders",
+    t3_p:"How we judge and punish those who do wrong — third-party moral licensing, the way we see offenders — and how much a society's belief that people can change shapes their chance to return.",
+    eb_pubs:"Publications", h_pubs:"Selected work.",
+    sub_articles:"Peer-reviewed articles", sub_conf:"Conference presentations", sub_wip:"Work in progress", sub_reports:"Research & policy reports", t_talk:"Talk", t_poster:"Poster",
+    eb_grants:"Grants", h_grants:"Funding.",
+    eb_teaching:"Teaching", h_teaching:"Courses taught.",
+    eb_exp:"Experience", h_exp:"Positions.",
+    eb_edu:"Education", h_edu:"Training.",
+    eb_cert:"Certifications", h_cert:"Assessment training.",
+    cert_note:"Participated in Korean validation studies of HCR-20, RSVP, and CAPP (2016–2017; Ministry of Justice / National Forensic Service).",
+    eb_contact:"Contact", h_contact:"Get in touch.",
+    c_email:"Email", c_aff:"Affiliation",
+    c_aff_v:"Law & Psychology Institute<br>Dongguk University<br>30 Pildong-ro 1-gil, Jung-gu, Seoul 04620, Korea",
+    c_else:"Elsewhere",
+    foot_loc:"Seoul, Republic of Korea",
+    t_review:"Under review", t_manual:"Manual"
+  },
+  ko:{
+    brand:"조병철",
+    nav_about:"소개", nav_research:"연구", nav_pubs:"논문·보고서", nav_teaching:"강의", nav_contact:"연락처",
+    role:"전문연구원(박사후연구원) · 정체성과 교정교화",
+    name:"조병철", name_sub:"Byeongcheol Cho · Ph.D.",
+    lede:"처벌만으로는 재범의 고리가 끊어지지 않습니다. 사람은 결국 자신을 무너뜨렸던 자리로 돌아가니까요. 교정교화는 그 자리에서 사람이 스스로를 다시 세우도록 돕는 일이고, 저는 그 변화의 열쇠가 <strong>정체성</strong>에 있다고 봅니다. 비행을 거듭한 청소년과 범죄를 저지른 성인이 '나는 어떤 사람인가'를 다시 세우도록 돕는 일, 그것이 제 연구입니다.",
+    chip1:"동국대학교 법심리연구소",
+    chip2:"SSK 생성형 AI 사용자 취약성 연구단",
+    eb_about:"소개",
+    h_about:"사람은 변할 수 있다 — 그 변화를 연구합니다.",
+    about1:"수형자 한 사람이 제게 말했습니다. “사회에 나가면 다시는 기회가 없다.” 잘못에는 책임이 따라야 합니다. 그러나 가두고 벌하는 것만으로 재범은 멈추지 않습니다. 형을 마친 사람은 자신을 무너뜨렸던 환경으로 돌아가고 거기서 다시 무너지면 그 대가는 또 다른 피해자가 치릅니다. 재범을 줄이는 일은 온정이 아니라 우리 모두를 지키는 일입니다. 그렇다면 무엇이 사람을 다시 서게 하는가. 환경이 그대로인데도 범죄에서 벗어나는 사람들이 있고 그들에게서 저는 한 가지 공통점을 봅니다. 자신을 보는 방식이 달라졌다는 것. 저는 그 변화의 조건을 정체성에서 찾고 과학으로 검증합니다.",
+    about2:"이 물음은 제 연구 이력을 관통합니다. 사회학에서 사람을 둘러싼 구조를, 사회심리학에서 잘못한 이를 향한 판단을 공부했고 성격심리학에서 정체성을 연구 주제로 삼았습니다. 한국형사·법무정책연구원에서 일한 6년은 이 물음을 자료와 현장 양쪽에서 검증한 시간이었습니다. 판결문과 수사기록, 교정 데이터를 분석했고 수형자와 피해자, 비행청소년, 여러 분야의 전문가를 만났습니다. 수치로 드러나는 경향과 면담에서 듣는 맥락은 같은 결론을 가리켰습니다. 사람을 다시 세우는 일은 정체성에서 시작된다는 것.",
+    about3:"박사학위논문에서 범죄자의 정체성을 분석한 것도 그래서입니다. 개입의 출발점은 그 사람이 자신을 어떤 사람으로 규정하는지를 아는 데 있다고 보았기 때문입니다. 분석 결과 부정적 정체성은 단순히 불안정한 상태가 아니었습니다. 범죄 안에서도 안정적으로 조직된 정체성이 존재했습니다. 여기서 다음 질문이 나왔습니다. 이미 굳어진 정체성도 다른 방향으로 재구성될 수 있는가. 제 연구의 무게가 정체성을 기술하는 데서 변화시키는 데로 옮겨 간 지점입니다. “범죄를 멈추라”가 아니라 “어떤 사람이 되고 싶은가”를 묻는 접근입니다. 지금은 이 물음을 소년원 현장으로 확장하려 합니다. 기관 협조를 구하는 초기 단계라 갈 길이 멀지만 청소년을 위험요인의 목록이 아니라 지향하는 자기상으로 이해하는 일을 목표로 합니다.",
+    about4:"박사후 과정에서는 범죄와 무관한 다른 갈래의 연구도 병행합니다. 사람과 AI에 관한 주제입니다. AI 의존을 심리학적 개념으로 정의하고 이를 측정하는 척도를 개발하고 있습니다. 다만 제가 궁극적으로 묻는 것은 그 너머에 있습니다. AI에 대한 의존이 인간을 인간이게 하는 것을 어떻게 바꾸는가. 대상은 다르지만 물음은 하나로 모입니다. 사람은 자신을 어떻게 이해하고 또 어떻게 달라지는가. 제가 연구로 닿으려는 곳은 분명합니다. 한 사람이 자신에 대한 이해를 다시 쓰고 더 나은 방향으로 변화할 수 있음을 근거로 보이는 일입니다. 사람은 변할 수 있습니다. 저는 그 변화를 연구합니다.",
+    eb_research:"연구",
+    h_research:"세 가지 주제, 하나의 물음.",
+    t1_t:"정체성과 범죄 중단, 그리고 교정교화",
+    t1_p:"제 연구의 중심입니다. 누구는 범죄에서 벗어나고 누구는 다시 돌아가는지, 그 갈림에서 정체성이 어떤 역할을 하는지를 봅니다. 정체성에는 여러 유형이 있는데, 저는 그중 부정적 정체성과 삶의 이야기로서의 정체성에 주목합니다. 청소년과 성인이 자기를 다시 세우도록 돕는 좋은 삶 모델(GLM) 기반 프로그램을 만들고, 한국연구재단 지원 소년원 과제도 여기에 속합니다.",
+    t2_t:"재범의 심리",
+    t2_p:"누가 다시 범죄로 돌아가는지 이해하기 위해, 바뀔 수 있는 요인들을 살핍니다. 범죄유발사고, 자기통제, 사이코패시, 공격성, 범죄 및 준법 행동 자기효능감 같은 것들이죠. 그 자체가 목적이 아니라, 정체성을 통한 변화를 더 정확히 겨냥하기 위한 단서로 봅니다.",
+    t3_t:"도덕과 처벌, 그리고 범죄자를 보는 사회의 시선",
+    t3_p:"우리가 잘못한 사람을 어떻게 판단하고 처벌하는지를 연구합니다. 제3자 도덕적 면허, 범죄자를 향한 시선, 그리고 '저 사람도 달라질 수 있다'는 사회의 믿음이 그의 복귀를 얼마나 좌우하는지를 봅니다.",
+    eb_pubs:"논문·보고서", h_pubs:"주요 연구 성과.",
+    sub_articles:"학술논문", sub_conf:"학술대회 발표", sub_wip:"진행 중 연구", sub_reports:"연구·정책 보고서", t_talk:"구두 발표", t_poster:"포스터",
+    eb_grants:"연구비", h_grants:"연구비 수주.",
+    eb_teaching:"강의", h_teaching:"담당 강의.",
+    eb_exp:"경력", h_exp:"경력 사항.",
+    eb_edu:"학력", h_edu:"학력 사항.",
+    eb_cert:"자격·교육", h_cert:"평가도구 교육 및 타당화.",
+    cert_note:"HCR-20·RSVP·CAPP 한국 타당화 연구 참여 (2016–2017, 법무부·국립과학수사연구원).",
+    eb_contact:"연락처", h_contact:"연락하기.",
+    c_email:"이메일", c_aff:"소속",
+    c_aff_v:"동국대학교 법심리연구소<br>서울특별시 중구 필동로1길 30 (04620)",
+    c_else:"링크",
+    foot_loc:"대한민국 서울",
+    t_review:"투고 중", t_manual:"매뉴얼"
+  }
+};
+
+// authors pre-bolded with <strong> on Cho
+const ARTICLES = [
+  { y:"2025",
+    en:"<strong>Cho, B.</strong>, Hwang, J. S., Yoon, G. Y., Lee, J. B., & Park, S. W. (2025). Validation of the Korean version of the Criminogenic Cognition Scale (K-CCS). <i>Korean Journal of Social and Personality Psychology, 39</i>(2), 199–227.",
+    ko:"<strong>조병철</strong>, 황재상, 윤가영, 이준배, 박선웅 (2025). 한국어판 범죄유발사고 척도(K-CCS)의 타당화. <i>한국심리학회지: 사회 및 성격, 39</i>(2), 199–227." },
+  { y:"2024",
+    en:"Kim, J. Y., Yoon, G. Y., <strong>Cho, B.</strong>, & Yoon, J. S. (2024). A typological analysis of stalking perpetrators in domestic correctional facilities. <i>Korean Police Studies Review, 24</i>(4), 33–69.",
+    ko:"김지연, 윤가영, <strong>조병철</strong>, 윤정숙 (2024). 국내 교정시설의 스토킹 가해자에 대한 유형별 특성 분석. <i>경찰학연구, 24</i>(4), 33–69." },
+  { y:"2024",
+    en:"Lee, J. B., Heo, Y. J., <strong>Cho, B.</strong>, & Park, S. W. (2024). The relationship between parental rearing attitudes and adolescents' mental health: The mediating effect of identity development. <i>Korean Journal of School Psychology, 21</i>(3), 281–299.",
+    ko:"이준배, 허유진, <strong>조병철</strong>, 박선웅 (2024). 부모의 양육태도와 청소년 자녀의 정신건강 간의 관계: 정체성 발달의 매개효과. <i>한국심리학회지: 학교, 21</i>(3), 281–299." },
+  { y:"2024",
+    en:"<strong>Cho, B.</strong>, Oh, J. H., Jeon, Y. S., Ko, K. W., & Park, S. W. (2024). The effect of explaining disposition goals on juveniles' adjustment to reformatory life: The mediating role of perceived disposition purpose. <i>Journal of Juvenile Protection, 37</i>(1), 133–156.",
+    ko:"<strong>조병철</strong>, 오지향, 전영실, 고기원, 박선웅 (2024). 소년원 처분목적에 대한 설명이 소년원 생활에 미치는 영향: 처분목적 인식의 매개효과. <i>소년보호연구, 37</i>(1), 133–156." },
+  { y:"2018",
+    en:"<strong>Cho, B.</strong>, & Kim, H. S. (2018). Third-party moral licensing: How perceptions of an offender's group membership shape observers' punishment judgments. <i>Korean Journal of Social and Personality Psychology, 32</i>(1), 1–31.",
+    ko:"<strong>조병철</strong>, 김혜숙 (2018). 제3자 도덕적 면허 효과: 범법자 소속 집단에 대한 지각이 관찰자의 처벌판단에 미치는 영향. <i>한국심리학회지: 사회 및 성격, 32</i>(1), 1–31." },
+  { y:"2018",
+    en:"Seo, J. H., <strong>Cho, B.</strong>, Kim, H. S., & Kim, K. I. (2018). Validation of the structured professional judgment (SPJ)-based violence risk assessment HCR-20 Version 3: A paradigm shift from prediction to prevention. <i>Korean Criminological Review, 29</i>(1), 309–366.",
+    ko:"서종한, <strong>조병철</strong>, 김희송, 김경일 (2018). 전문가판단모델(SPJ) 기반 폭력위험성평가(HCR-20) 버전 3 타당화 연구: 재범예측에서 예방으로의 패러다임 전환. <i>형사정책연구, 29</i>(1), 309–366." },
+  { y:"2017",
+    en:"<strong>Cho, B.</strong>, Lee, S. K., & Seo, J. H. (2017). Predictors of background information and crime-scene behavioral characteristics across types of mental disorder. <i>Korean Police Studies Review, 17</i>(4), 127–173.",
+    ko:"<strong>조병철</strong>, 이상경, 서종한 (2017). 정신질환유형에 따른 배경정보와 범죄현장행동특성 예측요인 연구. <i>경찰학연구, 17</i>(4), 127–173." },
+  { y:"2017",
+    en:"Seo, J. H., <strong>Cho, B.</strong>, Lee, G. A., & Kim, K. I. (2017). Ecological momentary assessment (EMA) diary-based analysis of suicide patterns: Focusing on gender differences. <i>Journal of the Korean Data Analysis Society, 19</i>(3), 1535–1556.",
+    ko:"서종한, <strong>조병철</strong>, 이가애, 김경일 (2017). 생태순간평가(EMA) 일기법 기반 자살패턴 분석: 성별차이를 중심으로. <i>한국자료분석학회지, 19</i>(3), 1535–1556." }
+];
+
+const CONFERENCES = [
+  { y:"2025", type:"talk",
+    en:"<strong>Cho, B.</strong> (2025, December). Distinct forms of negative identity among criminal offenders: Evidence of psychologically adjusted and unadjusted subtypes. <i>East Asian Association of Psychology and Law (EAAPL) 2025</i>, Seoul.",
+    ko:"<strong>Cho, B.</strong> (2025, December). Distinct forms of negative identity among criminal offenders: Evidence of psychologically adjusted and unadjusted subtypes. <i>East Asian Association of Psychology and Law (EAAPL) 2025</i>, 서울." },
+  { y:"2017", type:"talk",
+    en:"<strong>Cho, B.</strong>, & Kim, H. S. (2017, May). The third-party moral licensing effect: How perceptions of an offender's socioeconomic status shape observers' punishment judgments. <i>Annual Conference of the Korean Society for Social and Personality Psychology</i>.",
+    ko:"<strong>조병철</strong>, 김혜숙 (2017, 5월). 제3자 도덕적 면허 효과: 범죄자의 사회경제적 지위에 대한 지각이 관찰자의 처벌판단에 미치는 영향. <i>한국 사회 및 성격 심리학회 학술대회</i>." },
+  { y:"2016", type:"poster",
+    en:"Jeong, J. W., <strong>Cho, B.</strong>, Choi, Y. S., & Kim, H. S. (2016). The effect of perceived discrimination against one's own group on attitudes toward other minority groups. <i>Proceedings of the Korean Psychological Association Annual Conference</i>, 270.",
+    ko:"정재욱, <strong>조병철</strong>, 최유성, 김혜숙 (2016). 자신의 집단에 대한 차별 지각이 다른 소수 집단에 대한 태도에 미치는 영향. <i>한국심리학회 학술대회 자료집</i>, 270." },
+  { y:"2015", type:"poster",
+    en:"Jeong, J. W., <strong>Cho, B.</strong>, Kim, A. Y., & Kim, H. S. (2015). The effect of malleability beliefs about prejudice on contact intentions toward Southeast-Asian immigrants. <i>Proceedings of the Korean Psychological Association Annual Conference</i>, 332.",
+    ko:"정재욱, <strong>조병철</strong>, 김아영, 김혜숙 (2015). 편견의 가변성 신념이 동남아 이주민과의 접촉 의도에 미치는 영향. <i>한국심리학회 학술대회 자료집</i>, 332." }
+];
+
+const WIP = [
+  { en:"A manuscript from my doctoral dissertation on distinct forms of negative identity among offenders, in preparation.",
+    ko:"박사학위논문을 기반으로 한 범죄자의 부정적 정체성 유형 연구, 투고 준비 중." },
+  { en:"A longitudinal, identity-based assessment–intervention study with juveniles in reformatories (funded by the NRF Young Researcher Program): measurement, prediction, and a strength-based program.",
+    ko:"한국연구재단 신진연구 과제로 수행하는 소년원 청소년 대상 정체성 기반 평가–개입 종단 연구. 측정, 예측, 강점 기반 프로그램." },
+  { en:"<i>Beyond \"Who Wins?\": Differential Prediction Patterns of Self-Control and Psychopathy Subfactors on Aggression Subtypes</i> — in preparation.",
+    ko:"<i>누가 이기는가를 넘어서: 자기통제와 사이코패시 하위요인의 공격성 하위유형에 대한 차별적 예측 패턴</i> — 준비 중." },
+  { en:"A study of how psychopathy facets in offenders shape subtypes of aggression through cognitive and affective empathy, in preparation.",
+    ko:"범죄자의 사이코패시 하위요인이 인지적 공감과 정서적 공감을 매개로 공격성의 하위유형에 미치는 영향을 분석한 연구, 투고 준비 중." },
+  { en:"<i>Validation of the Korean Self-Efficacy for Criminal and Law-Abiding Behavior Questionnaire (K-SECLAB-Q)</i> — in preparation.",
+    ko:"<i>한국어판 범죄 및 준법 행동 자기효능감 척도(K-SECLAB-Q)의 타당화</i> — 준비 중." },
+  { en:"Testing the measurement invariance of the Criminogenic Cognition Scale (K-CCS) in some 500 drug offenders, compared with existing data — in preparation.",
+    ko:"마약사범 500여 명을 대상으로 범죄유발사고 척도(K-CCS)의 측정동일성을 검증하고 기존 자료와 비교하는 연구 — 준비 중." },
+  { en:"<i>AI Dependency as a Psychological Construct: Definition and Differentiation Beyond the Addiction Framework</i> — conceptual paper, in preparation (SSK).",
+    ko:"<i>AI Dependency as a Psychological Construct: Definition and Differentiation Beyond the Addiction Framework</i> — 개념 논문, 출판 준비 중 (SSK)." },
+  { en:"Developing a multidimensional AI-dependency scale, comparing Korea and the United States (SSK).",
+    ko:"한국과 미국을 비교해 다차원 AI 의존성 척도를 개발하는 진행 중 연구 (SSK)." },
+  { en:"A technology-acceptance (TAM) study of how fashion students take up AI design tools — the roles of usefulness, enjoyment, and concerns about copyright and privacy. In preparation.",
+    ko:"패션 전공 대학생의 AI 디자인 도구 수용을 기술수용모형(TAM)으로 분석한 연구. 유용성과 즐거움, 그리고 저작권과 개인정보 우려의 역할을 함께 살핍니다. 투고 준비 중." }
+];
+
+const GRANTS = [
+  { y:"2026 – 2028",
+    en:"<strong>National Research Foundation of Korea — Young Researcher Program.</strong> Principal Investigator · ₩40,000,000 over two years (2026.6–2028.5). <i>Shifting the juvenile training school treatment paradigm from risk reduction to identity strengthening: Building a data system for identity-based assessment, classification, intervention, and prediction.</i>",
+    ko:"<strong>한국연구재단 — 신진연구지원사업(신진연구일반).</strong> 연구책임자 · 2년간 4,000만 원 (2026.6–2028.5). <i>위험요인 감소에서 정체성 강화로의 소년원 처우 패러다임 전환: 정체성 기반 평가–분류–개입–예측을 위한 데이터 체계 구축.</i>" }
+];
+
+const REPORTS = [
+  { y:"2025", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Characteristics of gaslighting crimes and measures to strengthen the response", ko:"가스라이팅 범죄의 특성 및 대응 강화 방안" },
+  { y:"2025", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"An exploratory study of inmate problem-behavior factors within the correctional information system", ko:"교정정보시스템 내 수용자 문제행동요인 탐색 연구" },
+  { y:"2024", org_en:"Supreme Prosecutors' Office", org_ko:"대검찰청", en:"Preventing voice-phishing victimization through psychological analysis of victims", ko:"보이스피싱 피해자의 심리 분석을 통한 피해 예방 방안 연구" },
+  { y:"2024", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Sentencing and disposition standards for juvenile crime (I): Focusing on juvenile protective-disposition criteria", ko:"소년범죄 처벌 실태 분석 및 처분·양형 기준 도입방안 연구(I): 소년보호처분 기준을 중심으로" },
+  { y:"2024", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Characteristics of stalking crimes and strengthening countermeasures (II)", ko:"스토킹 범죄의 특성 및 대응방안 강화(II)" },
+  { y:"2023", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Characteristics of stalking crimes and strengthening countermeasures (I)", ko:"스토킹 범죄의 특성 및 대응방안 강화(I)" },
+  { y:"2023", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"A study on sentencing for stalking crimes", ko:"스토킹 범죄의 양형에 관한 연구" },
+  { y:"2023", org_en:"Supreme Prosecutors' Office", org_ko:"대검찰청", en:"In-depth analysis of the types and causes of abnormal-motive serious violent crime", ko:"이상동기 중대강력범죄의 유형과 원인 등에 대한 심층분석" },
+  { y:"2022", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Developing support services for stalking victims", ko:"스토킹 피해자 지원서비스 개발 연구" },
+  { y:"2022", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Gender-sensitivity survey of criminal-justice officials and analysis of gender-violence case law", ko:"형사사법분야 법집행공무원 성인지 조사 및 젠더폭력 관련 판례분석 실태조사" },
+  { y:"2022", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Victimization and characteristics of occupational safety and health crime: Focusing on the construction industry", ko:"산업안전보건범죄 피해 실태 및 특성에 관한 연구: 건설업을 중심으로" },
+  { y:"2021", org_en:"KICJ", org_ko:"한국형사·법무정책연구원", en:"Improving treatment to protect human rights in juvenile reformatories", ko:"소년원에서의 인권보호를 위한 처우개선 방안" },
+  { y:"2021", org_en:"MOGEF", org_ko:"여성가족부", en:"Trends in sexual crimes against children and adolescents (2020)", ko:"2020년 아동·청소년 대상 성범죄의 발생추세와 동향분석 연구" },
+  { y:"2021", org_en:"Ministry of Justice", org_ko:"법무부", en:"Characteristics of digital sex offenders and development of a foundational psychotherapy-program manual", ko:"디지털 성범죄자 특성연구 및 심리치료 프로그램 기초매뉴얼 개발 연구용역" },
+  { y:"2020", org_en:"MOGEF", org_ko:"여성가족부", en:"Trends in sexual crimes against children and adolescents (2019)", ko:"2019년 아동·청소년 대상 성범죄의 발생추세와 동향분석 연구" },
+  { y:"2020", org_en:"KIC", org_ko:"한국형사정책연구원", en:"Treatment of younger juveniles in criminal-justice procedures and community-cooperation measures", ko:"저연령소년에 대한 형사사법절차에서의 처우실태 및 지역사회 협력방안에 관한 연구" },
+  { y:"2020", org_en:"KIC", org_ko:"한국형사정책연구원", en:"Introducing pre-trial supervision for juveniles", ko:"소년에 대한 재판 전 감독 도입에 관한 연구" },
+  { y:"2019", org_en:"KIC", org_ko:"한국형사정책연구원", en:"Public safety in areas with concentrated foreign residents and improvement measures", ko:"외국인 밀집지역의 안전실태와 개선방안" },
+  { y:"2019", org_en:"MOGEF", org_ko:"여성가족부", en:"Conditions of prostitution and countermeasures (2019)", ko:"2019년 성매매 실태 및 대응방안 연구" },
+  { y:"2019", org_en:"MOGEF", org_ko:"여성가족부", en:"Trends in sexual crimes against children and adolescents (2018)", ko:"2018년 아동·청소년 대상 성범죄의 발생추세와 동향분석 연구" },
+  { y:"2018", org_en:"Ministry of Justice", org_ko:"법무부", en:"Managing inmates at risk of suicide through psychological autopsy", ko:"수용자 심리부검을 통한 자살우려자 관리방안" },
+  { y:"2018", org_en:"", org_ko:"", manual:true, en:"Operations manual for the Youth Crisis Text-Counseling System", ko:"청소년 위기문자 상담시스템 운영매뉴얼" },
+  { y:"2018", org_en:"", org_ko:"", manual:true, en:"Counseling manual for the Youth Crisis Text-Counseling System", ko:"청소년 위기문자 상담시스템 상담매뉴얼" },
+  { y:"2016", org_en:"Ministry of Education", org_ko:"교육부", en:"Preventing campus sexual harassment and violence and strengthening victim remedies", ko:"대학 성희롱·성폭력 예방 및 피해 구제 강화를 위한 방안" }
+];
+
+const TEACHING = [
+  { t_en:"2026 Fall · upcoming", t_ko:"2026-2학기 · 예정", c_en:"Social Psychology", c_ko:"사회심리학", l_en:"Undergraduate · Dongguk University", l_ko:"학부 · 동국대학교" },
+  { t_en:"2026 Spring", t_ko:"2026-1학기", c_en:"Judgment and Decision-Making", c_ko:"판단과 의사결정", l_en:"Undergraduate · Dongguk University", l_ko:"학부 · 동국대학교" },
+  { t_en:"2025 –", t_ko:"2025 –", c_en:"Advanced Social Psychology", c_ko:"고급사회심리", l_en:"Graduate School · Dongguk University", l_ko:"일반대학원 · 동국대학교" },
+  { t_en:"2025 –", t_ko:"2025 –", c_en:"Personality Psychology", c_ko:"성격심리학", l_en:"Graduate School of Professional Studies · Dongguk University", l_ko:"특수대학원 · 동국대학교" }
+];
+
+const EXPERIENCE = [
+  { t_en:"2025 – Present", t_ko:"2025 – 현재", r_en:"Postdoctoral Researcher", r_ko:"전문연구원(박사후연구원)", m_en:"SSK Research Group on Generative-AI User Vulnerability & Response Policy · Law and Psychology Institute, Dongguk University", m_ko:"SSK 생성형 AI 사용자 취약성 대응정책 연구단 · 법심리연구소, 동국대학교" },
+  { t_en:"2019 – 2025", t_ko:"2019 – 2025", r_en:"Senior Researcher", r_ko:"선임조사연구원", m_en:"Korean Institute of Criminology and Justice (KICJ) · Crime and Justice Policy Trends Division", m_ko:"한국형사·법무정책연구원 · 범죄법무동향연구실" },
+  { t_en:"2018 – 2019", t_ko:"2018 – 2019", r_en:"Researcher", r_ko:"연구원", m_en:"Institute for Suicide Prevention and Student Mental Health", m_ko:"자살과 학생정신건강연구소" },
+  { t_en:"", t_ko:"", r_en:"Other professional activity", r_ko:"기타 활동", m_en:"Lecturer for stalking-treatment programs; juvenile court-ordered attendance programs", m_ko:"스토킹 치료 강의; 소년 수강명령 프로그램" }
+];
+
+const EDUCATION = [
+  { t_en:"2020 – 2025", t_ko:"2020 – 2025", r_en:"Ph.D. in Culture and Social Psychology", r_ko:"박사 · 문화 및 사회심리학", m_en:"Korea University · Advisor: Prof. Sun-Woong Park · Dissertation: Distinct forms of negative identity among offenders (in preparation for publication)", m_ko:"고려대학교 · 지도교수 박선웅 · 학위논문: 범죄자의 부정적 정체성 유형에 대한 탐색적 연구 (출판 준비 중)" },
+  { t_en:"2015 – 2017", t_ko:"2015 – 2017", r_en:"M.A. in Social Psychology", r_ko:"석사 · 사회심리학", m_en:"Ajou University · Advisor: Prof. Hye-Sook Kim", m_ko:"아주대학교 · 지도교수 김혜숙" },
+  { t_en:"2011 – 2014", t_ko:"2011 – 2014", r_en:"B.A. in Sociology", r_ko:"학사 · 사회학", m_en:"Kookmin University", m_ko:"국민대학교" }
+];
+
+const CERTS = [
+  { r_en:"PCL-R — Psychopathy Checklist–Revised", r_ko:"PCL-R — 사이코패스 체크리스트", m_en:"Training completed", m_ko:"교육 이수" },
+  { r_en:"CAPP — Comprehensive Assessment of Psychopathic Personality Disorder", r_ko:"CAPP — 사이코패스 성격장애 종합평가", m_en:"Basic & advanced training completed", m_ko:"교육 및 심화교육 이수" },
+  { r_en:"RSVP — Risk for Sexual Violence Protocol", r_ko:"RSVP — 성폭력 위험성 평가", m_en:"Training completed", m_ko:"교육 이수" },
+  { r_en:"HCR-20 — Historical-Clinical-Risk Management-20", r_ko:"HCR-20 — 폭력 위험성 평가 도구", m_en:"Training completed", m_ko:"교육 이수" }
+];
+
+function entryRow(when, title, meta){
+  return '<div class="entry"><div class="when">'+when+'</div><div class="what"><p class="title">'+title+'</p>'+(meta?'<p class="meta">'+meta+'</p>':'')+'</div></div>';
+}
+
+function render(lang){
+  const t = I18N[lang];
+  document.querySelectorAll('[data-k]').forEach(el=>{ const k=el.getAttribute('data-k'); if(t[k]!==undefined) el.textContent=t[k]; });
+  document.querySelectorAll('[data-kh]').forEach(el=>{ const k=el.getAttribute('data-kh'); if(t[k]!==undefined) el.innerHTML=t[k]; });
+
+  // articles
+  document.getElementById('articles').innerHTML = ARTICLES.map(a=>{
+    const tag = a.review ? ' <span class="tag">'+t.t_review+'</span>' : '';
+    return '<div class="entry"><div class="when">'+a.y+'</div><div class="what"><p class="ref">'+a[lang]+tag+'</p></div></div>';
+  }).join('');
+
+  // conference presentations
+  document.getElementById('conferences').innerHTML = CONFERENCES.map(a=>{
+    const tg = a.type ? ' <span class="tag">'+(a.type==='talk'?t.t_talk:t.t_poster)+'</span>' : '';
+    return '<div class="entry"><div class="when">'+a.y+'</div><div class="what"><p class="ref">'+a[lang]+tg+'</p></div></div>';
+  }).join('');
+
+  // work in progress
+  document.getElementById('wip').innerHTML = WIP.map(a=>
+    '<div class="entry"><div class="when"></div><div class="what"><p class="ref">'+a[lang]+'</p></div></div>').join('');
+
+  // grants
+  document.getElementById('grants-list').innerHTML = GRANTS.map(g=>
+    '<div class="entry"><div class="when">'+g.y+'</div><div class="what"><p class="ref">'+g[lang]+'</p></div></div>').join('');
+
+  // reports
+  document.getElementById('reports').innerHTML = REPORTS.map(r=>{
+    const org = r['org_'+lang];
+    const tag = r.manual ? ' <span class="tag">'+t.t_manual+'</span>' : '';
+    const orgTxt = org ? ' <span class="org">— '+org+'</span>' : '';
+    return '<div class="rep"><span class="ry">'+r.y+'</span><span class="rt">'+r[lang]+orgTxt+tag+'</span></div>';
+  }).join('');
+
+  // teaching
+  document.getElementById('teaching-list').innerHTML = TEACHING.map(x=>
+    entryRow(x['t_'+lang], x['c_'+lang], x['l_'+lang])).join('');
+
+  // experience
+  document.getElementById('experience-list').innerHTML = EXPERIENCE.map(x=>
+    entryRow(x['t_'+lang], x['r_'+lang], x['m_'+lang])).join('');
+
+  // education
+  document.getElementById('education-list').innerHTML = EDUCATION.map(x=>
+    entryRow(x['t_'+lang], x['r_'+lang], x['m_'+lang])).join('');
+
+  // certs
+  document.getElementById('certs-list').innerHTML = CERTS.map(x=>
+    entryRow('', x['r_'+lang], x['m_'+lang])).join('');
+
+  document.documentElement.lang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-ko').classList.toggle('active', lang==='ko');
+}
+
+function setLang(l){ render(l); }
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+render('en');
+
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
