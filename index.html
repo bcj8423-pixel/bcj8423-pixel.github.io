@@ -130,6 +130,7 @@
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
   .reveal.in{opacity:1;transform:none;}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  h2:empty{display:none}
 </style>
 </head>
 <body>
@@ -181,7 +182,6 @@
 
   <section id="research" class="reveal">
     <p class="eyebrow" data-k="eb_research">Research</p>
-    <h2 data-k="h_research"></h2>
     <div class="themes">
       <div class="theme"><span class="tnum">i.</span><h3 data-k="t1_t"></h3><p data-k="t1_p"></p></div>
       <div class="theme"><span class="tnum">ii.</span><h3 data-k="t2_t"></h3><p data-k="t2_p"></p></div>
@@ -276,22 +276,22 @@ const I18N = {
     about3:"That is why my doctoral dissertation analyzed the identities of people who had offended. I took the starting point of any intervention to be understanding how a person defines who they are. What I found was that negative identity is not simply an unstable state; even within a life of crime, there were stably organized identities. That raised the next question: can an identity that has already hardened be rebuilt in another direction? This is where the weight of my work shifted from describing identity to changing it, from “stop offending” to “who do you want to become?” I am now working to extend this question into juvenile reformatories. It is an early stage, still a matter of securing institutional cooperation, with a long way to go; my aim is to understand a young person not as a list of risk factors but as the self they want to become.",
     about4:"In my postdoctoral work I also pursue a different line of research, unrelated to crime: people and AI. I am defining dependence on AI as a psychological construct and developing a way to measure it. But what I ultimately ask lies beyond that: how dependence on AI changes what makes us human. The subjects differ, but the question converges on one thing. How do people understand themselves, and how do they change? Where I want my research to arrive is clear: to show, with evidence, that a person can rewrite their understanding of themselves and change for the better. People can change. I study that change.",
     eb_research:"Research interests",
-    h_research:"Three threads, one question.",
+    h_research:"The questions I'm working on now",
     t1_t:"Identity, Desistance & Rehabilitation",
     t1_p:"The heart of my work. I look at why some people leave crime behind while others go back, and how identity shapes which way they go. Identity takes several forms; I focus on negative identity and on identity as a life story, and I build strength-based programs — in the spirit of the Good Lives Model — that help juveniles and adults rebuild who they are. My NRF-funded reformatory study belongs here.",
     t2_t:"The Psychology of Reoffending",
     t2_p:"To understand who returns to crime and who doesn't, I look at the changeable factors behind reoffending — criminogenic cognition, self-control, psychopathy, aggression, and self-efficacy for criminal versus law-abiding behavior. These are not ends in themselves, but clues for targeting identity-based change more precisely.",
     t3_t:"Morality, Punishment & the Social View of Offenders",
     t3_p:"How we judge and punish those who do wrong — third-party moral licensing, the way we see offenders — and how much a society's belief that people can change shapes their chance to return.",
-    eb_pubs:"Publications", h_pubs:"Selected work.",
+    eb_pubs:"Publications", h_pubs:"Selected work",
     sub_articles:"Peer-reviewed articles", sub_conf:"Conference presentations", sub_wip:"Work in progress", sub_reports:"Research & policy reports", t_talk:"Talk", t_poster:"Poster",
-    eb_grants:"Grants", h_grants:"Funding.",
-    eb_teaching:"Teaching", h_teaching:"Courses taught.",
-    eb_exp:"Experience", h_exp:"Positions.",
-    eb_edu:"Education", h_edu:"Training.",
-    eb_cert:"Certifications", h_cert:"Assessment training.",
+    eb_grants:"Grants", h_grants:"Funding",
+    eb_teaching:"Teaching", h_teaching:"Courses taught",
+    eb_exp:"Experience", h_exp:"Positions",
+    eb_edu:"Education", h_edu:"Training",
+    eb_cert:"Certifications", h_cert:"Assessment training",
     cert_note:"Participated in Korean validation studies of HCR-20, RSVP, and CAPP (2016–2017; Ministry of Justice / National Forensic Service).",
-    eb_contact:"Contact", h_contact:"Get in touch.",
+    eb_contact:"Contact", h_contact:"Get in touch",
     c_email:"Email", c_aff:"Affiliation",
     c_aff_v:"Law & Psychology Institute<br>Dongguk University<br>30 Pildong-ro 1-gil, Jung-gu, Seoul 04620, Korea",
     c_else:"Elsewhere",
@@ -313,22 +313,22 @@ const I18N = {
     about3:"박사학위논문에서 범죄자의 정체성을 분석한 것도 그래서입니다. 개입의 출발점은 그 사람이 자신을 어떤 사람으로 규정하는지를 아는 데 있다고 보았기 때문입니다. 분석 결과 부정적 정체성은 단순히 불안정한 상태가 아니었습니다. 범죄 안에서도 안정적으로 조직된 정체성이 존재했습니다. 여기서 다음 질문이 나왔습니다. 이미 굳어진 정체성도 다른 방향으로 재구성될 수 있는가. 제 연구의 무게가 정체성을 기술하는 데서 변화시키는 데로 옮겨 간 지점입니다. “범죄를 멈추라”가 아니라 “어떤 사람이 되고 싶은가”를 묻는 접근입니다. 지금은 이 물음을 소년원 현장으로 확장하려 합니다. 기관 협조를 구하는 초기 단계라 갈 길이 멀지만 청소년을 위험요인의 목록이 아니라 지향하는 자기상으로 이해하는 일을 목표로 합니다.",
     about4:"박사후 과정에서는 범죄와 무관한 다른 갈래의 연구도 병행합니다. 사람과 AI에 관한 주제입니다. AI 의존을 심리학적 개념으로 정의하고 이를 측정하는 척도를 개발하고 있습니다. 다만 제가 궁극적으로 묻는 것은 그 너머에 있습니다. AI에 대한 의존이 인간을 인간이게 하는 것을 어떻게 바꾸는가. 대상은 다르지만 물음은 하나로 모입니다. 사람은 자신을 어떻게 이해하고 또 어떻게 달라지는가. 제가 연구로 닿으려는 곳은 분명합니다. 한 사람이 자신에 대한 이해를 다시 쓰고 더 나은 방향으로 변화할 수 있음을 근거로 보이는 일입니다. 사람은 변할 수 있습니다. 저는 그 변화를 연구합니다.",
     eb_research:"관심 연구",
-    h_research:"세 가지 주제, 하나의 물음.",
+    h_research:"지금 붙들고 있는 질문들",
     t1_t:"정체성과 범죄 중단, 그리고 교정교화",
     t1_p:"제 연구의 중심입니다. 누구는 범죄에서 벗어나고 누구는 다시 돌아가는지, 그 갈림에서 정체성이 어떤 역할을 하는지를 봅니다. 정체성에는 여러 유형이 있는데, 저는 그중 부정적 정체성과 삶의 이야기로서의 정체성에 주목합니다. 청소년과 성인이 자기를 다시 세우도록 돕는 좋은 삶 모델(GLM) 기반 프로그램을 만들고, 한국연구재단 지원 소년원 과제도 여기에 속합니다.",
     t2_t:"재범의 심리",
     t2_p:"누가 다시 범죄로 돌아가는지 이해하기 위해, 바뀔 수 있는 요인들을 살핍니다. 범죄유발사고, 자기통제, 사이코패시, 공격성, 범죄 및 준법 행동 자기효능감 같은 것들이죠. 그 자체가 목적이 아니라, 정체성을 통한 변화를 더 정확히 겨냥하기 위한 단서로 봅니다.",
     t3_t:"도덕과 처벌, 그리고 범죄자를 보는 사회의 시선",
     t3_p:"우리가 잘못한 사람을 어떻게 판단하고 처벌하는지를 연구합니다. 제3자 도덕적 면허, 범죄자를 향한 시선, 그리고 '저 사람도 달라질 수 있다'는 사회의 믿음이 그의 복귀를 얼마나 좌우하는지를 봅니다.",
-    eb_pubs:"논문·보고서", h_pubs:"주요 연구 성과.",
+    eb_pubs:"논문·보고서", h_pubs:"",
     sub_articles:"학술논문", sub_conf:"학술대회 발표", sub_wip:"진행 중 연구", sub_reports:"연구·정책 보고서", t_talk:"구두 발표", t_poster:"포스터",
-    eb_grants:"연구비", h_grants:"연구비 수주.",
-    eb_teaching:"강의", h_teaching:"담당 강의.",
-    eb_exp:"경력", h_exp:"경력 사항.",
-    eb_edu:"학력", h_edu:"학력 사항.",
-    eb_cert:"자격·교육", h_cert:"평가도구 교육 및 타당화.",
+    eb_grants:"연구비", h_grants:"",
+    eb_teaching:"강의", h_teaching:"",
+    eb_exp:"경력", h_exp:"",
+    eb_edu:"학력", h_edu:"",
+    eb_cert:"자격·교육", h_cert:"",
     cert_note:"HCR-20·RSVP·CAPP 한국 타당화 연구 참여 (2016–2017, 법무부·국립과학수사연구원).",
-    eb_contact:"연락처", h_contact:"연락하기.",
+    eb_contact:"연락처", h_contact:"",
     c_email:"이메일", c_aff:"소속",
     c_aff_v:"동국대학교 법심리연구소<br>서울특별시 중구 필동로1길 30 (04620)",
     c_else:"링크",
@@ -382,23 +382,23 @@ const CONFERENCES = [
 
 const WIP = [
   { en:"A manuscript from my doctoral dissertation on distinct forms of negative identity among offenders, in preparation.",
-    ko:"박사학위논문을 기반으로 한 범죄자의 부정적 정체성 유형 연구, 투고 준비 중." },
+    ko:"박사학위논문을 기반으로 한 범죄자의 부정적 정체성 유형 연구, 준비 중." },
   { en:"A longitudinal, identity-based assessment–intervention study with juveniles in reformatories (funded by the NRF Young Researcher Program): measurement, prediction, and a strength-based program.",
     ko:"한국연구재단 신진연구 과제로 수행하는 소년원 청소년 대상 정체성 기반 평가–개입 종단 연구. 측정, 예측, 강점 기반 프로그램." },
   { en:"<i>Beyond \"Who Wins?\": Differential Prediction Patterns of Self-Control and Psychopathy Subfactors on Aggression Subtypes</i> — in preparation.",
     ko:"<i>누가 이기는가를 넘어서: 자기통제와 사이코패시 하위요인의 공격성 하위유형에 대한 차별적 예측 패턴</i> — 준비 중." },
   { en:"A study of how psychopathy facets in offenders shape subtypes of aggression through cognitive and affective empathy, in preparation.",
-    ko:"범죄자의 사이코패시 하위요인이 인지적 공감과 정서적 공감을 매개로 공격성의 하위유형에 미치는 영향을 분석한 연구, 투고 준비 중." },
+    ko:"범죄자의 사이코패시 하위요인이 인지적 공감과 정서적 공감을 매개로 공격성의 하위유형에 미치는 영향을 분석한 연구, 준비 중." },
   { en:"<i>Validation of the Korean Self-Efficacy for Criminal and Law-Abiding Behavior Questionnaire (K-SECLAB-Q)</i> — in preparation.",
     ko:"<i>한국어판 범죄 및 준법 행동 자기효능감 척도(K-SECLAB-Q)의 타당화</i> — 준비 중." },
   { en:"Testing the measurement invariance of the Criminogenic Cognition Scale (K-CCS) in some 500 drug offenders, compared with existing data — in preparation.",
     ko:"마약사범 500여 명을 대상으로 범죄유발사고 척도(K-CCS)의 측정동일성을 검증하고 기존 자료와 비교하는 연구 — 준비 중." },
   { en:"<i>AI Dependency as a Psychological Construct: Definition and Differentiation Beyond the Addiction Framework</i> — conceptual paper, in preparation (SSK).",
-    ko:"<i>AI Dependency as a Psychological Construct: Definition and Differentiation Beyond the Addiction Framework</i> — 개념 논문, 출판 준비 중 (SSK)." },
+    ko:"<i>AI Dependency as a Psychological Construct: Definition and Differentiation Beyond the Addiction Framework</i> — 개념 논문, 준비 중 (SSK)." },
   { en:"Developing a multidimensional AI-dependency scale, comparing Korea and the United States (SSK).",
     ko:"한국과 미국을 비교해 다차원 AI 의존성 척도를 개발하는 진행 중 연구 (SSK)." },
   { en:"A technology-acceptance (TAM) study of how fashion students take up AI design tools — the roles of usefulness, enjoyment, and concerns about copyright and privacy. In preparation.",
-    ko:"패션 전공 대학생의 AI 디자인 도구 수용을 기술수용모형(TAM)으로 분석한 연구. 유용성과 즐거움, 그리고 저작권과 개인정보 우려의 역할을 함께 살핍니다. 투고 준비 중." }
+    ko:"패션 전공 대학생의 AI 디자인 도구 수용을 기술수용모형(TAM)으로 분석한 연구. 유용성과 즐거움, 그리고 저작권과 개인정보 우려의 역할을 함께 살핍니다. 준비 중." }
 ];
 
 const GRANTS = [
@@ -449,14 +449,14 @@ const EXPERIENCE = [
 ];
 
 const EDUCATION = [
-  { t_en:"2020 – 2025", t_ko:"2020 – 2025", r_en:"Ph.D. in Culture and Social Psychology", r_ko:"박사 · 문화 및 사회심리학", m_en:"Korea University · Advisor: Prof. Sun-Woong Park · Dissertation: Distinct forms of negative identity among offenders (in preparation for publication)", m_ko:"고려대학교 · 지도교수 박선웅 · 학위논문: 범죄자의 부정적 정체성 유형에 대한 탐색적 연구 (출판 준비 중)" },
+  { t_en:"2020 – 2025", t_ko:"2020 – 2025", r_en:"Ph.D. in Culture and Social Psychology", r_ko:"박사 · 문화 및 사회심리학", m_en:"Korea University · Advisor: Prof. Sun-Woong Park · Dissertation: Distinct forms of negative identity among offenders", m_ko:"고려대학교 · 지도교수 박선웅 · 학위논문: 범죄자의 부정적 정체성 유형에 대한 탐색적 연구" },
   { t_en:"2015 – 2017", t_ko:"2015 – 2017", r_en:"M.A. in Social Psychology", r_ko:"석사 · 사회심리학", m_en:"Ajou University · Advisor: Prof. Hye-Sook Kim", m_ko:"아주대학교 · 지도교수 김혜숙" },
   { t_en:"2011 – 2014", t_ko:"2011 – 2014", r_en:"B.A. in Sociology", r_ko:"학사 · 사회학", m_en:"Kookmin University", m_ko:"국민대학교" }
 ];
 
 const CERTS = [
   { r_en:"PCL-R — Psychopathy Checklist–Revised", r_ko:"PCL-R — 사이코패스 체크리스트", m_en:"Training completed", m_ko:"교육 이수" },
-  { r_en:"CAPP — Comprehensive Assessment of Psychopathic Personality Disorder", r_ko:"CAPP — 사이코패스 성격장애 종합평가", m_en:"Basic & advanced training completed", m_ko:"교육 및 심화교육 이수" },
+  { r_en:"CAPP — Comprehensive Assessment of Psychopathic Personality", r_ko:"CAPP — 사이코패스 성격장애 종합평가", m_en:"Basic & advanced training completed", m_ko:"교육 및 심화교육 이수" },
   { r_en:"RSVP — Risk for Sexual Violence Protocol", r_ko:"RSVP — 성폭력 위험성 평가", m_en:"Training completed", m_ko:"교육 이수" },
   { r_en:"HCR-20 — Historical-Clinical-Risk Management-20", r_ko:"HCR-20 — 폭력 위험성 평가 도구", m_en:"Training completed", m_ko:"교육 이수" }
 ];
