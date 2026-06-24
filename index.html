@@ -121,6 +121,7 @@
   .contact-grid .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.4rem;}
   html[lang="ko"] .contact-grid .label{font-family:var(--sans);font-weight:600;letter-spacing:.02em;}
   .contact-grid a,.contact-grid p{font-size:1.02rem;margin:0 0 .3rem;}
+  .contact-grid a{display:block;width:max-content;max-width:100%;}
   @media (max-width:600px){.contact-grid{grid-template-columns:1fr;}}
 
   footer{padding:2.4rem 0 3.2rem;}
@@ -161,12 +162,13 @@
     <h1 class="name" data-k="name">Byeong Cheol Cho</h1>
     <p class="name-sub" data-k="name_sub">조병철 · Ph.D.</p>
     <div class="hero-meta">
-      <span class="chip" data-k="chip1">Law &amp; Psychology Institute, Dongguk University</span>
+      <span class="chip" data-k="chip1">Institute of Law and Psychology, Dongguk University</span>
       <span class="chip" data-k="chip2">SSK Research Group · Generative-AI User Vulnerability</span>
     </div>
     <div class="hero-links">
       <a href="mailto:bcj8423@gmail.com"><span class="dot"></span>bcj8423@gmail.com</a>
       <a href="https://scholar.google.co.kr/citations?hl=ko&user=ZKfxHZIAAAAJ" target="_blank" rel="noopener"><span class="dot"></span>Google Scholar</a>
+      <a href="Byeong-Cheol-Cho-CV.pdf" target="_blank" rel="noopener"><span class="dot"></span>CV (PDF)</a>
     </div>
   </div>
 </div>
@@ -178,6 +180,18 @@
     <h2 data-k="h_about"></h2>
     <p class="lede" data-k="about1"></p>
     <p class="lede" data-k="about2"></p>
+  </section>
+
+  <section id="education" class="reveal">
+    <p class="eyebrow" data-k="eb_edu">Education</p>
+    <h2 data-k="h_edu"></h2>
+    <div class="entries" id="education-list"></div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <p class="eyebrow" data-k="eb_exp">Experience</p>
+    <h2 data-k="h_exp"></h2>
+    <div class="entries" id="experience-list"></div>
   </section>
 
   <section id="research" class="reveal">
@@ -214,18 +228,6 @@
     <div class="entries" id="teaching-list"></div>
   </section>
 
-  <section id="experience" class="reveal">
-    <p class="eyebrow" data-k="eb_exp">Experience</p>
-    <h2 data-k="h_exp"></h2>
-    <div class="entries" id="experience-list"></div>
-  </section>
-
-  <section id="education" class="reveal">
-    <p class="eyebrow" data-k="eb_edu">Education</p>
-    <h2 data-k="h_edu"></h2>
-    <div class="entries" id="education-list"></div>
-  </section>
-
   <section id="certs" class="reveal">
     <p class="eyebrow" data-k="eb_cert">Certifications</p>
     <h2 data-k="h_cert"></h2>
@@ -246,6 +248,7 @@
       <div>
         <p class="label" data-k="c_else">Elsewhere</p>
         <a href="https://scholar.google.co.kr/citations?hl=ko&user=ZKfxHZIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="Byeong-Cheol-Cho-CV.pdf" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a>
       </div>
     </div>
   </section>
@@ -267,7 +270,7 @@ const I18N = {
     role:"Postdoctoral Researcher · Self-Identity & Correctional Rehabilitation",
     name:"Byeong Cheol Cho", name_sub:"조병철 · Ph.D.",
     lede:"People can change.",
-    chip1:"Law & Psychology Institute, Dongguk University",
+    chip1:"Institute of Law and Psychology, Dongguk University",
     chip2:"SSK Research Group · Generative-AI User Vulnerability",
     eb_about:"About",
     h_about:"People can change.",
@@ -288,12 +291,12 @@ const I18N = {
     eb_grants:"Grants", h_grants:"Funding",
     eb_teaching:"Teaching", h_teaching:"Courses taught",
     eb_exp:"Experience", h_exp:"Positions",
-    eb_edu:"Education", h_edu:"Training",
+    eb_edu:"Education", h_edu:"Degrees",
     eb_cert:"Certifications", h_cert:"Assessment training",
     cert_note:"Participated in Korean validation studies of HCR-20, RSVP, and CAPP (2016–2017; Ministry of Justice / National Forensic Service).",
     eb_contact:"Contact", h_contact:"Get in touch",
     c_email:"Email", c_aff:"Affiliation",
-    c_aff_v:"Law & Psychology Institute<br>Dongguk University<br>30 Pildong-ro 1-gil, Jung-gu, Seoul 04620, Korea",
+    c_aff_v:"Institute of Law and Psychology<br>Dongguk University<br>30 Pildong-ro 1-gil, Jung-gu, Seoul 04620, Korea",
     c_else:"Elsewhere",
     foot_loc:"Seoul, Republic of Korea",
     t_review:"Under review", t_manual:"Manual"
@@ -369,6 +372,9 @@ const CONFERENCES = [
   { y:"2025", type:"talk",
     en:"<strong>Cho, B. C.</strong> (2025, December). Distinct forms of negative identity among criminal offenders: Evidence of psychologically adjusted and unadjusted subtypes. <i>East Asian Association of Psychology and Law (EAAPL) 2025</i>, Seoul.",
     ko:"<strong>Cho, B. C.</strong> (2025, December). Distinct forms of negative identity among criminal offenders: Evidence of psychologically adjusted and unadjusted subtypes. <i>East Asian Association of Psychology and Law (EAAPL) 2025</i>, 서울." },
+  { y:"2023", type:"talk",
+    en:"Kim, J., Yoon, J., & <strong>Cho, B. C.</strong> (2023). Factors affecting investigative behavior leading to secondary victimization of gender-based crime. <i>15th Biennial Conference of the Asian Association of Social Psychology</i>, Hong Kong.",
+    ko:"Kim, J., Yoon, J., & <strong>Cho, B. C.</strong> (2023). Factors affecting investigative behavior leading to secondary victimization of gender-based crime. <i>15th Biennial Conference of the Asian Association of Social Psychology</i>, 홍콩." },
   { y:"2017", type:"talk",
     en:"<strong>Cho, B. C.</strong>, & Kim, H. S. (2017, May). The third-party moral licensing effect: How perceptions of an offender's socioeconomic status shape observers' punishment judgments. <i>Annual Conference of the Korean Society for Social and Personality Psychology</i>.",
     ko:"<strong>조병철</strong>, 김혜숙 (2017, 5월). 제3자 도덕적 면허 효과: 범죄자의 사회경제적 지위에 대한 지각이 관찰자의 처벌판단에 미치는 영향. <i>한국 사회 및 성격 심리학회 학술대회</i>." },
@@ -442,7 +448,7 @@ const TEACHING = [
 ];
 
 const EXPERIENCE = [
-  { t_en:"2025 – Present", t_ko:"2025 – 현재", r_en:"Postdoctoral Researcher", r_ko:"전문연구원(박사후연구원)", m_en:"SSK Research Group on Generative-AI User Vulnerability & Response Policy · Law and Psychology Institute, Dongguk University", m_ko:"SSK 생성형 AI 사용자 취약성 대응정책 연구단 · 법심리연구소, 동국대학교" },
+  { t_en:"2025 – Present", t_ko:"2025 – 현재", r_en:"Postdoctoral Researcher", r_ko:"전문연구원(박사후연구원)", m_en:"SSK Research Group on Generative-AI User Vulnerability & Response Policy · Institute of Law and Psychology, Dongguk University", m_ko:"SSK 생성형 AI 사용자 취약성 대응정책 연구단 · 법심리연구소, 동국대학교" },
   { t_en:"2019 – 2025", t_ko:"2019 – 2025", r_en:"Senior Researcher", r_ko:"선임조사연구원", m_en:"Korean Institute of Criminology and Justice (KICJ) · Crime and Justice Policy Trends Division", m_ko:"한국형사·법무정책연구원 · 범죄법무동향연구실" },
   { t_en:"2018 – 2019", t_ko:"2018 – 2019", r_en:"Researcher", r_ko:"연구원", m_en:"Institute for Suicide Prevention and Student Mental Health", m_ko:"자살과 학생정신건강연구소" },
   { t_en:"", t_ko:"", r_en:"Other professional activity", r_ko:"기타 활동", m_en:"Lecturer for stalking-treatment programs; juvenile court-ordered attendance programs", m_ko:"스토킹 치료 강의; 소년 수강명령 프로그램" }
